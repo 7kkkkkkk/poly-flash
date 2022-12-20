@@ -60,7 +60,7 @@ contract Flashloan is IFlashloan, DodoBase, FlashloanValidation, Withdraw {
         FlashCallbackData memory decoded = abi.decode(
             data,
             (FlashCallbackData)
-        );
+        ); // data从function dodoFlashLoan里来
 
         address loanToken = RouteUtils.getInitialToken(decoded.routes[0]);
 
